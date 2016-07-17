@@ -1,0 +1,62 @@
+//
+//  PrefixHeader.pch
+//  YCLProject
+//
+//  Created by 杨承龙 on 16/7/15.
+//  Copyright © 2016年 Albert. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#import "AppDelegate.h"
+
+//用于存放全局宏定义或者静态字符串
+#import "Constant.h"
+
+//自定义类别
+#import "RequestPath.h"
+#import "NSString+YCL.h"
+#import "NSObject+Parse.h"
+#import "NSObject+AFNetworking.h"
+#import "UIScrollView+Refresh.h"
+#import "AppDelegate+System.h"
+#import "UIView+HUD.h"
+
+
+#import <MJRefresh.h>   //优秀的滚动视图头部和脚部刷新效果
+#import <AFNetworking.h> //Github排名第一的第三方网络请求类库,封装了系统的 NSURLSession+NSOperation
+#import <UIKit+AFNetworking.h> //对UIKit类添加类拓展,让诸如UIButton, UIImageView等拥有了网络图片的功能
+
+/** 改变系统的target + selector模式为 block 模式. 带来紧凑的代码风格, 高效率的回调执行 */
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+#import <BlocksKit+MessageUI.h>
+/** ----------------------------- */
+
+#import <YYKit.h>
+
+#import <CocoaLumberjack.h> //优秀的替换NSLog的第三方,更加省资源,并且可以定义打印级别
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else 
+static const int ddLogLevel = DDLogLevelError;
+#endif
+
+//#import <GCDAsyncSocket.h> //第三方socket通讯类库,对系统CFNetwork类库进行了封装
+#import <MBProgressHUD.h> //实现安卓 toast风格提示,弹出提示框
+
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry.h>
+
+#import <UIImageView+WebCache.h> //SDWebImage
+
+#import <RESideMenu.h> //QQ的左侧菜单栏风格
+#import <MWPhotoBrowser.h> //图片浏览器
+
+
+
+#endif /* PrefixHeader_pch */
